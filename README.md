@@ -2,6 +2,8 @@
 
 Spins up a simple Minecraft server for you and your buddies.
 
+For other variations of this, check out the branches of this repo.
+
 ## Disclaimer
 
 Honestly, this isn't *as* good as [ITZG](https://github.com/itzg/docker-minecraft-server). This project has over 100 contributors and their scripting achieves so much more than what I have done here.
