@@ -1,6 +1,6 @@
 # Dockerized Minecraft
 
-Spins up a simple Minecraft server for you and your buddies.
+Spins up a simple Minecraft server for you and your buddies, except run my Paper.
 
 For other variations of this, check out the branches of this repo.
 
@@ -32,8 +32,10 @@ No need for a start script; just used an endpoint to achieve the exact same thin
 I haven't released this on Docker Hub yet. 
 
 ```
-docker build . -t mc_server:latest
-docker run --name my_mc_server -p 25565:25565/tcp mc_server:latest
+mkdir /opt/minecraft
+# Download this repo into above dir
+docker build . -t mc_server:1.17.1-paper
+docker run --name my_mc_server -p 25565:25565/tcp -v /opt/minecraft:/data mc_server:1.17.1-paper
 ## If on RH
 #firewall-cmd --zone=public --permanent --add-port=25565/tcp
 #firewall-cmd --reload

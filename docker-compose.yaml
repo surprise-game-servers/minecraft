@@ -1,8 +1,5 @@
 version: '3.1'
 
-volumes:
-  minecraft_data:
-
 services:
   minecraft:
     build:
@@ -11,6 +8,4 @@ services:
     ports:
       - 25565:25565/tcp
     volumes:
-      - type: volume
-        source: minecraft_data
-        target: /data
+      - /opt/minecraft/:/data
